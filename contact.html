@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div id="header-container"></div>  <!-- Header will be loaded here -->
+    
+    <main>
+        
+        <div class="contact-map">
+            <h1>Contact Us</h1>
+            <h3>+91 9299992995</h3>
+          <h1>Find us at the location below:</h1>
+        
+            <center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15356.487838957044!2d80.23046054618746!3d15.797521957490027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a5ae3727a63c9%3A0x5aa94caa4e9b4f79!2sThimmasamudram%2C%20Andhra%20Pradesh%20523185!5e0!3m2!1sen!2sin!4v1736161120460!5m2!1sen!2sin" width="600" height="450" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></center>
+        </div>
+        
+    </main>
+
+    <div id="footer-container"></div>  <!-- Footer will be loaded here -->
+
+    <script>
+        // Load header and footer dynamically
+        document.getElementById("header-container").innerHTML = fetch('includes/header.html').then(res => res.text()).then(data => document.getElementById("header-container").innerHTML = data);
+        document.getElementById("footer-container").innerHTML = fetch('includes/footer.html').then(res => res.text()).then(data => document.getElementById("footer-container").innerHTML = data);
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div id="header-container"></div>  <!-- Header will be loaded here -->
+    
+    <main>
+        
+        <div id="campus-container">
+            <!-- Page Title -->
+            <h1 id="campus-title">Our Campus</h1>
+            
+            <!-- Campus Images -->
+            <img src="images\campus3.jpeg" alt="Campus Image 1" class="campus-image">
+            <img src="images\campus2.jpeg" alt="Campus Image 2" class="campus-image">
+            <img src="images\campus1.jpeg" alt="Campus Image 3" class="campus-image">
+        </div>
+        
+    </main>
+
+    <div id="footer-container"></div>  <!-- Footer will be loaded here -->
+
+    <script>
+        // Load header and footer dynamically
+        document.getElementById("header-container").innerHTML = fetch('includes/header.html').then(res => res.text()).then(data => document.getElementById("header-container").innerHTML = data);
+        document.getElementById("footer-container").innerHTML = fetch('includes/footer.html').then(res => res.text()).then(data => document.getElementById("footer-container").innerHTML = data);
+    </script>
+</body>
+</html>

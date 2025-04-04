@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div id="header-container"></div>  <!-- Header will be loaded here -->
+    
+    <main>
+        
+        <div class="container mt-4">
+            <h2 class="text-center mb-4">Meet Our Faculty</h2>
+    
+            <!-- Principal Section -->
+            <div class="card text-center p-3 mb-4">
+                <img src="images\principal.jpeg" alt="Principal" class="mx-auto">
+                <div class="card-body">
+                    <h4 class="card-title">Dr. Mudraboina Rama Chandra Rao</h4>
+                    <p class="card-text">M.A(Sanskrit),M.A.(Telugu),Ph.D. in Sanskrit</p>
+                    <p class="card-text">Principal since 2024</p>
+                    <p class="card-text">Experience: 10+ years in education and research</p>
+                    <p class="card-text">Phone Number : 9299992995</p>
+                </div>
+            </div>
+    
+            <!-- Faculty Section -->
+            <div class="row">
+                <!-- Staff 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center p-3">
+                        <img src="images\staff1.jpeg" alt="Faculty 1" class="mx-auto">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr.G.Amrutha</h5>
+                            <p class="card-text">M.A.(Telugu),Ph.D.</p>
+                            <p class="card-text">Phone Number : 9182903477</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Staff 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center p-3">
+                        <img src="images\staff2.jpeg" alt="Faculty 2" class="mx-auto">
+                        <div class="card-body">
+                            <h5 class="card-title">Prof.I.Hemalatha</h5>
+                            <p class="card-text">M.A.(Sanskrit)</p>
+                            <p class="card-text">Phone Number : 7729806944</p>
+                        </div>
+                    </div>
+            </div>
+            </div>
+            </div>
+        
+    </main>
+
+    <div id="footer-container"></div>  <!-- Footer will be loaded here -->
+
+    <script>
+        // Load header and footer dynamically
+        document.getElementById("header-container").innerHTML = fetch('includes/header.html').then(res => res.text()).then(data => document.getElementById("header-container").innerHTML = data);
+        document.getElementById("footer-container").innerHTML = fetch('includes/footer.html').then(res => res.text()).then(data => document.getElementById("footer-container").innerHTML = data);
+    </script>
+</body>
+</html>

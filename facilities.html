@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div id="header-container"></div>  <!-- Header will be loaded here -->
+    
+    <main>
+        
+        <div id="facilities-container">
+            <!-- Page Title -->
+            <h1 id="facilities-title">Our Facilities</h1>
+    
+            <!-- Computer Lab -->
+            <div class="facility">
+                <h2 class="facility-title">Computer Lab</h2>
+                <img src="images\img3.jpeg" alt="Computer Lab" class="facility-image">
+            </div>
+    
+            <!-- Mess -->
+            <div class="facility">
+                <h2 class="facility-title">Mess</h2>
+                <img src="images\img2.jpeg" alt="Mess" class="facility-image">
+            </div>
+    
+            <!-- Hostel -->
+            <div class="facility">
+                <h2 class="facility-title">Hostel</h2>
+                <img src="images\img1.jpeg" alt="Hostel" class="facility-image">
+            </div>
+        </div>
+        
+    </main>
+
+    <div id="footer-container"></div>  <!-- Footer will be loaded here -->
+
+    <script>
+        // Load header and footer dynamically
+        document.getElementById("header-container").innerHTML = fetch('includes/header.html').then(res => res.text()).then(data => document.getElementById("header-container").innerHTML = data);
+        document.getElementById("footer-container").innerHTML = fetch('includes/footer.html').then(res => res.text()).then(data => document.getElementById("footer-container").innerHTML = data);
+    </script>
+</body>
+</html>
